@@ -3,6 +3,7 @@ package cfd;
 public class CoffeeMaker {
 
 	public String introducirAgua() {
+		
 		return null;
 		// TODO Auto-generated method stub
 		
@@ -10,7 +11,6 @@ public class CoffeeMaker {
 
 	public String introducirFiltroCafe() {
 		return null;
-		// TODO Auto-generated method stub
 		
 	}
 
