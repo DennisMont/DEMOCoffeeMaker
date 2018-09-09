@@ -1,5 +1,5 @@
 package cfd;
 
-public class BoilerHeater extends Actuator{
+public class BoilerHeater extends OnOffDevice{
 
 }

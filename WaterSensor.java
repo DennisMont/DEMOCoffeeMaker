@@ -1,9 +1,11 @@
 package cfd;
+public class WaterSensor extends DigitalSensor{
 
-public class WaterSensor extends AbstractSensor{
-
-	public WaterSensor() {
-		super();
-		// TODO Auto-generated constructor stub
+	public void setState(TypeEnum typ) {
+		
+		switch(typ) {
+		case EnumBoilerState.boilerEmpty,EnumBoilerState.boilerNotEmpty:
+			state=typ;
+		}
 	}
 }
