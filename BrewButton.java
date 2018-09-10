@@ -10,17 +10,17 @@ public class BrewButton extends AbstractSensor {
 	
 	public boolean verifyConditions()
 	{
-		boolean estado = false;
+		boolean state = false;
 		//Verificamos si hay agua y si el recepaculo del filtro esta cerrado.
 		if(waterS.getState()==DigitalValue.Detected && filterS.getState()==DigitalValue.Detected)
 		{
 			//Verificamos que el pot esta en posicion.
-			if(pressureS.getState()==AnalogValue.potNotEmpty || pressureS.getState()==AnalogValue.potEmpty)
+			if(pressureS.getState()==AnalogValue.potNotEmpty)
 			{
-				estado=true;//El CoffeeMaker esta en condiciones de iniciar el preparado.
+				state=true;//El CoffeeMaker esta en condiciones de iniciar el preparado.
 			}
 		}
-		return estado;
+		return state;
 	}
 	
 	public StageCoffeeMaker startBrew()
