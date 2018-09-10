@@ -3,7 +3,7 @@ package cfd;
 public class BrewButton extends AbstractSensor {
 	WaterSensor waterS = new WaterSensor();
 	FilterReceptacleSensor filterS = new FilterReceptacleSensor();
-	PressureSensor pressureS = new PressureSensor();
+	PlateSensor plateS = new PlateSensor();
 	
 	public BrewButton()
 	{}
@@ -12,10 +12,10 @@ public class BrewButton extends AbstractSensor {
 	{
 		boolean estado = false;
 		//Verificamos si hay agua y si el recepaculo del filtro esta cerrado.
-		if(waterS.getState()==DigitalValue.Detected && filterS.getState()==DigitalValue.Detected)
+		if(waterS.getState()==DigitalValue.BoilerNonEmpty && filterS.getState()==DigitalValue.BoilerNonEmpty)
 		{
 			//Verificamos que el pot esta en posicion.
-			if(pressureS.getState()==AnalogValue.potNotEmpty || pressureS.getState()==AnalogValue.potEmpty)
+			if(plateS.getState()==AnalogValue.potNotEmpty || plateS.getState()==AnalogValue.potEmpty)
 			{
 				estado=true;//El CoffeeMaker esta en condiciones de iniciar el preparado.
 			}

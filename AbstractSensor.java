@@ -4,15 +4,19 @@ public abstract class AbstractSensor implements Sensor{
 
 	TypeEnum state;
 	
+	public AbstractSensor() {
+		state = DigitalValue.BoilerEmpty;
+	}
+
 	public void setState(TypeEnum typ) 
 	{
-		if(typ==DigitalValue.Detected)
+		if(typ==DigitalValue.BoilerNonEmpty)
 		{
-			state=DigitalValue.Detected;
+			state=DigitalValue.BoilerNonEmpty;
 		}
-		else if(typ==DigitalValue.NonDetected)
+		else if(typ==DigitalValue.BoilerEmpty)
 		{
-			state=DigitalValue.NonDetected;
+			state=DigitalValue.BoilerEmpty;
 		}
 	}
 	
