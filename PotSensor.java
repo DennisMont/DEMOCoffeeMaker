@@ -1,9 +1,10 @@
 package cfd;
 
-public class PressureSensor extends AbstractSensor{
+public class PotSensor extends AbstractSensor{
 
 	@Override
 	public void setState(TypeEnum typ) {
+				
 		if(typ==AnalogValue.potEmpty)
 		{
 			state=AnalogValue.potEmpty;
@@ -16,5 +17,9 @@ public class PressureSensor extends AbstractSensor{
 		{
 			state=AnalogValue.warmerEmpty;
 		}
+	}
+	
+	public TypeEnum getState() {
+		return state;
 	}
 }
