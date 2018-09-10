@@ -8,19 +8,19 @@ public class BoilerHeaterTest {
 
 	@Test
 	public void test_BoilerHeaderTurnOff_pass() {
-		Actuator BoilerH = new BoilerHeater();
+		OnOffDevice BoilerH = new BoilerHeater();
 		BoilerH.turnOff();
-		DeviceStates RealValue = BoilerH.getState();
-		DeviceStates Expected = DeviceStates.NonActivate;
+		EnumDeviceState RealValue = BoilerH.getState();
+		EnumDeviceState Expected = EnumDeviceState.off;
 		assertEquals(Expected,RealValue);
 	}
 
 	@Test
 	public void test_BoilerHeaderTurnOn_pass() {
-		Actuator BoilerH = new BoilerHeater();
+		OnOffDevice BoilerH = new BoilerHeater();
 		BoilerH.turnOn();
-		DeviceStates RealValue = BoilerH.getState();
-		DeviceStates Expected = DeviceStates.Activate;
+		EnumDeviceState RealValue = BoilerH.getState();
+		EnumDeviceState Expected = EnumDeviceState.on;
 		assertEquals(Expected,RealValue);
 	}
 

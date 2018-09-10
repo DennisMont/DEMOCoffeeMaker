@@ -2,23 +2,23 @@ package cfd;
 
 public class Actuator {
 
-	DeviceStates stateActuator;
+	EnumDeviceState stateActuator;
 	
 	public Actuator() {
-		stateActuator = DeviceStates.NonActivate;
+		stateActuator = EnumDeviceState.off;
 	}
 
 	public void turnOff()
 	{
-		stateActuator = DeviceStates.NonActivate;
+		stateActuator = EnumDeviceState.off;
 	}
 	
 	public void turnOn()
 	{
-		stateActuator = DeviceStates.Activate;
+		stateActuator = EnumDeviceState.on;
 	}
 	
-	public DeviceStates getState()
+	public EnumDeviceState getState()
 	{
 		return stateActuator;
 	}

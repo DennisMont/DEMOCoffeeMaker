@@ -1,11 +1,13 @@
 package cfd;
 public class WaterSensor extends DigitalSensor{
 
-	public void setState(TypeEnum typ) {
+	public void setState(ITypeEnum typ) {
 		
-		switch(typ) {
-		case EnumBoilerState.boilerEmpty,EnumBoilerState.boilerNotEmpty:
+		if ( typ==EnumBoilerState.boilerEmpty)
 			state=typ;
-		}
+		if ( typ==EnumBoilerState.boilerNotEmpty)
+			state=typ;
 	}
+
+	
 }

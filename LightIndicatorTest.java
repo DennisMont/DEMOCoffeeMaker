@@ -8,19 +8,19 @@ public class LightIndicatorTest {
 
 	@Test
 	public void testTurnOff() {
-		Actuator LightIn = new LightIndicator();
+		OnOffDevice LightIn = new LightIndicator();
 		LightIn.turnOff();
-		DeviceStates RealValue = LightIn.getState();
-		DeviceStates Expected = DeviceStates.NonActivate;
+		EnumDeviceState RealValue = LightIn.getState();
+		EnumDeviceState Expected = EnumDeviceState.off;
 		assertEquals(Expected,RealValue);
 	}
 
 	@Test
 	public void testTurnOn() {
-		Actuator LightIn = new LightIndicator();
+		OnOffDevice LightIn = new LightIndicator();
 		LightIn.turnOn();
-		DeviceStates RealValue = LightIn.getState();
-		DeviceStates Expected = DeviceStates.Activate;
+		EnumDeviceState RealValue = LightIn.getState();
+		EnumDeviceState Expected = EnumDeviceState.on;
 		assertEquals(Expected,RealValue);
 	}
 

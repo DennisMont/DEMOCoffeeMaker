@@ -1,5 +1,6 @@
+package cfd;
 
-public enum EnumBoilerState implements TypeEnum {
+public enum EnumBoilerState implements ITypeEnum {
 boilerEmpty,
 boilerNotEmpty
 }

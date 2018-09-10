@@ -8,19 +8,19 @@ public class WaterSensorTest {
 
 	@Test
 	public void AbsSensor_WaterSensorState_detected() {
-		AbstractSensor waterS = new WaterSensor();
-		waterS.setState(DigitalValue.BoilerNonEmpty);
-		TypeEnum st = waterS.getState();
-		TypeEnum exp = DigitalValue.BoilerNonEmpty;
+		DigitalSensor waterS = new WaterSensor();
+		waterS.setState(EnumBoilerState.boilerNotEmpty);
+		ITypeEnum st = waterS.getState();
+		ITypeEnum exp = EnumBoilerState.boilerNotEmpty;
 		assertEquals(exp,st);
 	}
 	
 	@Test
 	public void AbsSensor_WaterSensorState_nondetected() {
-		AbstractSensor waterS = new WaterSensor();
-		waterS.setState(DigitalValue.BoilerEmpty);
-		TypeEnum st = waterS.getState();
-		TypeEnum exp = DigitalValue.BoilerEmpty;
+		DigitalSensor waterS = new WaterSensor();
+		waterS.setState(EnumBoilerState.boilerEmpty);
+		ITypeEnum st = waterS.getState();
+		ITypeEnum exp = EnumBoilerState.boilerEmpty;
 		assertEquals(exp,st);
 	}
 }

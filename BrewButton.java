@@ -12,7 +12,7 @@ public class BrewButton extends AbstractSensor {
 	{
 		boolean estado = false;
 		//Verificamos si hay agua y si el recepaculo del filtro esta cerrado.
-		if(waterS.getState()==DigitalValue.BoilerNonEmpty && filterS.getState()==DigitalValue.BoilerNonEmpty)
+		if(waterS.getState()==EnumBoilerState.boilerNotEmpty && filterS.getState()==DigitalValue.BoilerNonEmpty)
 		{
 			//Verificamos que el pot esta en posicion.
 			if(plateS.getState()==AnalogValue.potNotEmpty || plateS.getState()==AnalogValue.potEmpty)

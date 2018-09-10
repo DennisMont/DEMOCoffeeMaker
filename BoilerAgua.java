@@ -1,5 +1,5 @@
+package cfd;
 import cfd.BoilerHeater;
-import cfd.ITypeEnum;
 import cfd.IBoiler;
 import cfd.Valvula;
 import cfd.WaterSensor;
@@ -9,7 +9,7 @@ public class BoilerAgua implements IBoiler {
 		private WaterSensor waterSensor;
 		private Valvula valvula;
 	
-		public Boiler() {
+		public BoilerAgua() {
 			
 			boilerHeater = new BoilerHeater();
 			waterSensor = new WaterSensor();
@@ -34,6 +34,10 @@ public class BoilerAgua implements IBoiler {
 
 		public void turnOnHeater() {
 			boilerHeater.turnOn();
+		}
+		
+		public EnumDeviceState getHeaterState() {
+			return boilerHeater.getState();
 		}
 		
 		public void OpenValve() {

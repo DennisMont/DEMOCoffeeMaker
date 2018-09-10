@@ -1,3 +1,4 @@
+package cfd;
 
 public interface IBoiler {
 	boolean isEmpty();
